@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Blog Cards</title>
+  <style>
+
+    body {
+      background-color: #f0e6d3;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .all-cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 250px;
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px gray;
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-text {
+      padding: 14px;
+      text-align: left;
+    }
+
+    .card-date {
+      font-size: 11px;
+      color: gray;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #111;
+      margin: 6px 0;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 10px;
+      border-top: 1px solid #eee;
+      gap: 6px;
+    }
+
+    /* All three buttons (Read, Views, Comments) share same size and style */
+    .btn {
+      width: 72px;
+      height: 42px;
+      border: 2px solid;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.3;
+    }
+
+    /* Read button — filled with color */
+    .read-btn {
+      color: white;
+    }
+
+    /* Views & Comments — outline only */
+    .stat-btn {
+      background-color: white;
+    }
+
+    /* Pink theme (Card 1) */
+    .pink      { background-color: #e91e8c; border-color: #e91e8c; }
+    .pink-out  { border-color: #e91e8c;     color: #e91e8c; }
+
+    /* Orange theme (Card 2) */
+    .orange     { background-color: #ff6600; border-color: #ff6600; }
+    .orange-out { border-color: #ff6600;     color: #ff6600; }
+
+    /* Green theme (Card 3) */
+    .green     { background-color: #22c55e; border-color: #22c55e; }
+    .green-out { border-color: #22c55e;     color: #22c55e; }
+
+    /* Hover effect for all buttons */
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    /* Alert popup on click */
+    .btn:active {
+      transform: scale(0.95);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="all-cards">
+
+    <!-- Card 1 — Pink -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80" alt="Green Hills" />
+      <div class="card-text">
+        <p class="card-date">2 days ago</p>
+        <h2 class="card-title">Green Hills</h2>
+        <p class="card-desc">Rolling green hills and fresh mountain air — the perfect escape from busy city life.</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn read-btn pink" onclick="alert('Opening Green Hills post...')">Read</button>
+        <button class="btn stat-btn pink-out" onclick="alert('5123 people viewed this post!')"><strong>5123</strong>Views</button>
+        <button class="btn stat-btn pink-out" onclick="alert('32 comments on this post!')"><strong>32</strong>Comments</button>
+      </div>
+    </div>
+
+    <!-- Card 2 — Orange -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518467166778-b88f373ffec7?w=600&q=80" alt="Calm Lake" />
+      <div class="card-text">
+        <p class="card-date">1 week ago</p>
+        <h2 class="card-title">Calm Lake</h2>
+        <p class="card-desc">Still waters and quiet skies — discover why lakeside retreats are trending for travel lovers.</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn read-btn orange" onclick="alert('Opening Calm Lake post...')">Read</button>
+        <button class="btn stat-btn orange-out" onclick="alert('7152 people viewed this post!')"><strong>7152</strong>Views</button>
+        <button class="btn stat-btn orange-out" onclick="alert('21 comments on this post!')"><strong>21</strong>Comments</button>
+      </div>
+    </div>
+
+    <!-- Card 3 — Green -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600&q=80" alt="Wildflowers" />
+      <div class="card-text">
+        <p class="card-date">3 weeks ago</p>
+        <h2 class="card-title">Wildflowers</h2>
+        <p class="card-desc">Fields of colour stretching to the horizon — nature's own painting that blooms every spring.</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn read-btn green" onclick="alert('Opening Wildflowers post...')">Read</button>
+        <button class="btn stat-btn green-out" onclick="alert('3021 people viewed this post!')"><strong>3021</strong>Views</button>
+        <button class="btn stat-btn green-out" onclick="alert('15 comments on this post!')"><strong>15</strong>Comments</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

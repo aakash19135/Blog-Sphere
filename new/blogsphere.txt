@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Sphere</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#f7f7f7;
+}
+
+nav{
+    background:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #ddd;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:black;
+}
+
+.container{
+    width:80%;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:40px;
+}
+
+.blogs{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.author{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+.author img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+
+.card h2{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#555;
+    line-height:1.5;
+}
+
+.info{
+    margin-top:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.actions{
+    display:flex;
+    gap:15px;
+}
+
+.actions button{
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.sidebar{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    height:fit-content;
+}
+
+.sidebar h3{
+    margin-bottom:20px;
+}
+
+.trend{
+    margin-bottom:20px;
+}
+
+.trend p{
+    color:#666;
+    font-size:14px;
+}
+
+@media(max-width:768px){
+
+.container{
+    width:95%;
+    grid-template-columns:1fr;
+}
+
+.nav-links{
+    display:none;
+}
+
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Blog Sphere</div>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Write</a>
+        <a href="#">Bookmarks</a>
+        <a href="#">Profile</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="blogs">
+
+        <div class="card">
+
+            <div class="author">
+                <img src="https://i.pravatar.cc/100?img=1">
+                <div>
+                    <h4>John Doe</h4>
+                    <small>5 min read</small>
+                </div>
+            </div>
+
+            <h2>Learning JavaScript in 2026</h2>
+
+            <p>
+                JavaScript remains one of the most popular programming
+                languages for web development. Here are the concepts
+                every beginner should learn...
+            </p>
+
+            <div class="info">
+
+                <span>June 15, 2026</span>
+
+                <div class="actions">
+                    <button>👏 254</button>
+                    <button>💬 34</button>
+                    <button>🔖</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="author">
+                <img src="https://i.pravatar.cc/100?img=5">
+                <div>
+                    <h4>Sarah Smith</h4>
+                    <small>7 min read</small>
+                </div>
+            </div>
+
+            <h2>React vs Angular</h2>
+
+            <p>
+                Choosing the right frontend framework can significantly
+                impact development speed and maintainability.
+            </p>
+
+            <div class="info">
+
+                <span>June 12, 2026</span>
+
+                <div class="actions">
+                    <button>👏 412</button>
+                    <button>💬 61</button>
+                    <button>🔖</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="author">
+                <img src="https://i.pravatar.cc/100?img=12">
+                <div>
+                    <h4>Alex Martin</h4>
+                    <small>4 min read</small>
+                </div>
+            </div>
+
+            <h2>CSS Tricks Every Developer Should Know</h2>
+
+            <p>
+                Improve your layouts using Flexbox, Grid and responsive
+                design techniques used in modern applications.
+            </p>
+
+            <div class="info">
+
+                <span>June 10, 2026</span>
+
+                <div class="actions">
+                    <button>👏 190</button>
+                    <button>💬 20</button>
+                    <button>🔖</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="sidebar">
+
+        <h3>Trending on Medium</h3>
+
+        <div class="trend">
+            <h4>Artificial Intelligence</h4>
+            <p>12.5K readers today</p>
+        </div>
+
+        <div class="trend">
+            <h4>Web Development</h4>
+            <p>9.3K readers today</p>
+        </div>
+
+        <div class="trend">
+            <h4>Programming</h4>
+            <p>8.1K readers today</p>
+        </div>
+
+        <div class="trend">
+            <h4>Data Science</h4>
+            <p>6.7K readers today</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
